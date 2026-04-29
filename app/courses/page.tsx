@@ -1,3 +1,4 @@
+'use client';
 import Navbar from '@/components/marketing/Navbar';
 import Footer from '@/components/marketing/Footer';
 import CourseCard from '@/components/marketing/CourseCard';
