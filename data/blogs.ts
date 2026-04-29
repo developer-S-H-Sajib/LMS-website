@@ -1,0 +1,1 @@
+export const blogs = Array.from({length:6}).map((_,i)=>({title:`Top LMS Growth Strategy ${i+1} for Bangladesh Institutes`, excerpt:'Boost enrollments using localized trust signals, conversion pages, and hybrid online learning systems.', date:'2026-04-20'}));

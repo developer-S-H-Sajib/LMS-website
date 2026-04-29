@@ -1,0 +1,4 @@
+'use client';
+import { motion } from 'framer-motion';
+import Navbar from '@/components/marketing/Navbar';import Footer from '@/components/marketing/Footer';import PaymentModal from '@/components/marketing/PaymentModal';import { pricingPlans } from '@/data/pricing';
+export default function Page(){return <main className='bg-gradient-to-b from-slate-950 to-slate-100'><Navbar/><section className='section'><div className='container-p grid gap-6 md:grid-cols-3'>{pricingPlans.map((p,i)=><motion.div whileHover={{y:-10}} key={p.id} className={`rounded-3xl bg-white p-7 shadow-premium ${i===1?'ring-2 ring-primary scale-105':''}`}><p className='font-semibold'>{p.name}{i===1?' • Most Popular':''}</p><p className='my-2 text-4xl font-bold'>{p.price}</p><ul className='text-sm text-slate-600'>{p.features.map(f=><li key={f}>• {f}</li>)}</ul></motion.div>)}</div><div className='container-p mt-10'><PaymentModal/></div></section><Footer/></main>}
