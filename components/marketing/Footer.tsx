@@ -1,3 +1,1 @@
-'use client';
-import { useLanguage } from '@/hooks/use-language';
-export default function Footer(){const {t}=useLanguage();return <footer className='border-t bg-slate-950 py-10 text-white'><div className='container-p flex flex-col gap-3 md:flex-row md:items-center md:justify-between'><p className='font-semibold'>LMS Pro BD</p><p className='text-sm text-white/75'>{t.footer}</p></div></footer>}
+export default function Footer(){return <footer className='border-t py-10'><div className='container-p grid gap-4 md:grid-cols-3'><div><h4 className='font-semibold'>LMS Pro BD</h4><p className='text-sm text-slate-600'>Dhaka office • WhatsApp support • বাংলা support</p></div><div className='text-sm'>Email: hello@lmsprobd.demo</div><div className='text-sm'>© 2026 LMS Pro BD</div></div></footer>}
