@@ -1,0 +1,2 @@
+import Navbar from '@/components/marketing/Navbar';import Footer from '@/components/marketing/Footer';import PaymentModal from '@/components/marketing/PaymentModal';
+export default function Page(){return <main><Navbar/><section className='section'><div className='container-p'><h1 className='text-3xl font-bold'>Payment Demo</h1><p>Demo Payment Only. Real payment will be connected later.</p><div className='mt-4'><PaymentModal/></div></div></section><Footer/></main>}

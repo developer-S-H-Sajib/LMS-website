@@ -1,0 +1,1 @@
+export default function Page(){return <main className='section'><div className='container-p'><div className='rounded-2xl border-8 border-primary/30 bg-white p-10 text-center shadow-premium'><h1 className='text-4xl font-bold'>Certificate of Completion</h1><p className='mt-6'>Awarded to Rahim Ahmed for successfully completing Web Development Bootcamp.</p></div></div></main>}

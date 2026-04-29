@@ -1,0 +1,2 @@
+import Navbar from '@/components/marketing/Navbar';import Footer from '@/components/marketing/Footer';
+export default function Page(){return <main><Navbar/><section className='section'><div className='container-p'><h1 className='text-3xl font-bold'>About LMS Pro BD</h1><p>Built for Bangladesh coaching, Quran academies, IELTS centers, and private institutes to grow enrollments with premium LMS experience.</p></div></section><Footer/></main>}
