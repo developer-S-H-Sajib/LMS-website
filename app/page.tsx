@@ -1,0 +1,12 @@
+import Navbar from '@/components/marketing/Navbar';
+import Footer from '@/components/marketing/Footer';
+import CourseCard from '@/components/marketing/CourseCard';
+import PaymentModal from '@/components/marketing/PaymentModal';
+import { courses } from '@/data/courses';
+import { faqs } from '@/data/faqs';
+import { testimonials } from '@/data/testimonials';
+import { pricingPlans } from '@/data/pricing';
+
+export default function HomePage(){
+  return <main><Navbar/><section className='section'><div className='container-p grid items-center gap-10 md:grid-cols-2'><div><h1 className='text-4xl font-bold'>Learn Skills. Build Career.</h1><p className='mt-4 text-slate-600'>Bangladesh’s trusted online learning platform.</p><div className='mt-6 flex gap-3'><a href='/courses' className='rounded-xl bg-primary px-4 py-2 text-white'>Explore Courses</a><a href='/pricing' className='rounded-xl border px-4 py-2'>Get LMS Demo</a></div></div><div className='rounded-2xl bg-white p-6 shadow-premium'><p>10,000+ Students • 250+ Courses • 98% Success Rate</p><div className='mt-4 h-48 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20'/></div></div></section><section className='section bg-white'><div className='container-p'><h2 className='mb-6 text-2xl font-bold'>Featured Courses</h2><div className='grid gap-5 md:grid-cols-2 lg:grid-cols-4'>{courses.slice(0,4).map(c=><CourseCard key={c.slug} course={c}/>)}</div></div></section><section className='section'><div className='container-p grid gap-5 md:grid-cols-3'>{testimonials.map(t=><div key={t.name} className='rounded-2xl bg-white p-5 shadow-premium'><p>“{t.quote}”</p><p className='mt-3 font-semibold'>{t.name}</p></div>)}</div></section><section className='section bg-white'><div className='container-p grid gap-4 md:grid-cols-3'>{pricingPlans.map(p=><div key={p.id} className='rounded-2xl border p-5'><h3 className='font-semibold'>{p.name}{p.popular?' • Most Popular':''}</h3><p className='my-2 text-2xl font-bold'>{p.price}</p><ul className='text-sm'>{p.features.map(f=><li key={f}>• {f}</li>)}</ul></div>)}</div><div className='mt-8'><PaymentModal/></div></section><section className='section'><div className='container-p max-w-3xl space-y-3'>{faqs.map(f=><details key={f.q} className='rounded-xl bg-white p-4'><summary className='font-medium'>{f.q}</summary><p className='mt-2 text-sm'>{f.a}</p></details>)}</div></section><Footer/></main>
+}

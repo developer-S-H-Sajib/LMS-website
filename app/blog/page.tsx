@@ -1,0 +1,2 @@
+import Navbar from '@/components/marketing/Navbar';import Footer from '@/components/marketing/Footer';import { blogs } from '@/data/blogs';
+export default function Page(){return <main><Navbar/><section className='section'><div className='container-p grid gap-5 md:grid-cols-3'>{blogs.map(b=><article key={b.title} className='rounded-2xl bg-white p-5 shadow-premium'><h3 className='font-semibold'>{b.title}</h3><p className='mt-2 text-sm'>{b.excerpt}</p></article>)}</div></section><Footer/></main>}
